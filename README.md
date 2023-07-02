@@ -17,8 +17,6 @@
 ## 📒 Table of Contents
 - [📒 Table of Contents](#-table-of-contents)
 - [📍 Overview](#-overview)
-- [📂 Project Structure](#project-structure)
-- [🧩 Modules](#modules)
 - [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
@@ -29,34 +27,6 @@
 ## 📍 Overview
 
 The rclone-decrypt-express project is a simple [Express](https://expressjs.com/) server that uses the [Rclone](https://rclone.org/) JavaScript library [rclone-js](https://www.npmjs.com/package/rclone) to create a read stream for a file at a specified URL, determine the file type of the stream, and then set up the response headers to allow the file to be downloaded by the client. It uses [dotenv](https://www.npmjs.com/package/dotenv) for environment variable management, [file-type](https://www.npmjs.com/package/file-type) to determine the file type from the stream, [from2](https://www.npmjs.com/package/from2) to create a readable stream, and [stream-chunker](https://www.npmjs.com/package/stream-chunker) to chunk the stream data.
-
----
-
-
-## 📂 Project Structure
-
-
-```bash
-repo
-├── LICENSE
-├── README.md
-├── package.json
-└── server.js
-
-1 directory, 3 files
-```
-
----
-
-## 🧩 Modules
-
-<details closed><summary>Root</summary>
-
-| File                                                                                | Summary                                                                                                                                                                                                                                                                                             |
-| ---                                                                                 | ---                                                                                                                                                                                                                                                                                                 |
-| [server.js](https://github.com/Renzodef/rclone-decrypt-express/blob/main/server.js) | This code snippet is an Express server that handles file downloads. It uses Rclone to securely retrieve files from a given URL. It determines the file's MIME type, sets the appropriate headers, and streams the file to the client. It also checks for valid URLs and authentication credentials. |
-
-</details>
 
 ---
 
@@ -133,4 +103,4 @@ The project maintainers will review your changes and provide feedback or merge t
 
 ## 📄 License
 
-This project is licensed under the `ℹ️ MIT` License. See the [LICENSE](https://github.com/Renzodef/rclone-decrypt-express/blob/main/LICENSE) file for additional info.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Renzodef/rclone-decrypt-express/blob/main/LICENSE) file for additional info.
