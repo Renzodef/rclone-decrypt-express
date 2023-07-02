@@ -26,7 +26,7 @@
 
 ## 📍 Overview
 
-The rclone-decrypt-express project is a simple [Express](https://expressjs.com/) server that uses the [Rclone](https://rclone.org/) JavaScript library [rclone-js](https://www.npmjs.com/package/rclone) to create a read stream for a file at a specified URL, determine the file type of the stream, and then set up the response headers to allow the file to be downloaded by the client. It uses [dotenv](https://www.npmjs.com/package/dotenv) for environment variable management, [file-type](https://www.npmjs.com/package/file-type) to determine the file type from the stream, [from2](https://www.npmjs.com/package/from2) to create a readable stream, and [stream-chunker](https://www.npmjs.com/package/stream-chunker) to chunk the stream data.
+The rclone-decrypt-express project is a simple [Express](https://expressjs.com/) server that uses the [Rclone](https://rclone.org/) JavaScript library [rclone-js](https://www.npmjs.com/package/rclone) to create a read stream for a Rclone crypted remote file at a specified URL, determine the file type of the stream, and then set up the response headers to allow the file to be downloaded by the client. It uses [dotenv](https://www.npmjs.com/package/dotenv) for environment variable management, [file-type](https://www.npmjs.com/package/file-type) to determine the file type from the stream, [from2](https://www.npmjs.com/package/from2) to create a readable stream, and [stream-chunker](https://www.npmjs.com/package/stream-chunker) to chunk the stream data.
 
 ---
 
