@@ -10,6 +10,7 @@
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style&logo=JavaScript&logoColor=black" alt="JavaScript" />
 <img src="https://img.shields.io/badge/Express-000000.svg?style&logo=Express&logoColor=white" alt="Express" />
 <img src="https://img.shields.io/badge/PM2-2B037A.svg?style&logo=PM2&logoColor=white" alt="PM2" />
+</p>
 </div>
 
 ---
