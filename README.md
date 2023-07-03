@@ -9,7 +9,6 @@
 <p align="center">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style&logo=JavaScript&logoColor=black" alt="JavaScript" />
 <img src="https://img.shields.io/badge/Express-000000.svg?style&logo=Express&logoColor=white" alt="Express" />
-<img src="https://img.shields.io/badge/PM2-2B037A.svg?style&logo=PM2&logoColor=white" alt="PM2" />
 </p>
 </div>
 
@@ -71,7 +70,7 @@ yarn start
 
 Once the server is running, to use the application, you need to pass the URL of the encrypted file you want to decrypt as a query parameter to the server's root endpoint (`/`). The file must be accessible through Rclone.
 
-For example, if you have an encrypted file at `https://cloud-storage.com/encrypted-file` and you are running the server on `localhost:3000`, you would open your web browser and navigate to `http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file`.
+For example, if you have an encrypted file at `https://cloud-storage.com/encrypted-file` and you are running the server on `localhost:3000`, you would open your web browser and navigate to [http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file](http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file).
 
 The server will then decrypt the file and set up the response headers to allow you to download the decrypted file directly from your browser. 
 
