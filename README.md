@@ -27,7 +27,7 @@
 
 ## 📍 Overview
 
-The rclone-decrypt-express project is a simple [Express](https://expressjs.com/) server that uses the [Rclone](https://rclone.org/) JavaScript library [rclone-js](https://www.npmjs.com/package/rclone) to create a read stream for a Rclone crypted remote file at a specified URL, determine the file type of the stream, and then set up the response headers to allow the file to be downloaded by the client. It uses [dotenv](https://www.npmjs.com/package/dotenv) for environment variable management, [file-type](https://www.npmjs.com/package/file-type) to determine the file type from the stream, [from2](https://www.npmjs.com/package/from2) to create a readable stream, and [stream-chunker](https://www.npmjs.com/package/stream-chunker) to chunk the stream data.
+The rclone-decrypt-express project is a simple [Express](https://expressjs.com/) server to decrypt a Rclone crypted remote file at a specified URL. The server creates a read stream for the file, determine the file type of the stream using the [file-type](https://github.com/sindresorhus/file-type) library, and then dowloads it to your local machine. The decryption is performed using the [rclone-js](https://github.com/FWeinb/rclone-js) library.
 
 ---
 
@@ -37,8 +37,8 @@ The rclone-decrypt-express project is a simple [Express](https://expressjs.com/)
 
 Before you begin, ensure that you have the following prerequisites installed:
 - [Node.js](https://nodejs.org/)
-- [Npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
-- [Rclone](https://rclone.org/)
+- [Yarn](https://yarnpkg.com/)
+- The URL of a [Rclone](https://rclone.org/) crypted remote file
 
 ### 📦 Installation
 
@@ -54,26 +54,24 @@ cd rclone-decrypt-express
 
 3. Install the dependencies:
 ```sh
-npm install
-```
-or
-```sh
 yarn install
 ```
 
-4. Copy the `.env.example` to `.env` and set your `RCLONE_PASSWORD` and `RCLONE_SALT`.
+4. Copy the `.env.example` to `.env` and set your `RCLONE_PASSWORD` and `RCLONE_SALT` (you can find these in your `rclone.conf` file respectively as "password" and "password2").
 
 ### 🎮 Using rclone-decrypt-express
 
-This application uses [PM2](https://pm2.keymetrics.io/) as a process manager to keep the server running. PM2 provides features like automatic restarts if the application crashes and easy application management.
+The server uses [forever-monitor](https://github.com/foreversd/forever-monitor) as a process manager. This allows the server to automatically restart in the event of a crash or unexpected termination.
 
-1. To start the server with PM2, run: `npm start` or `yarn start`
-2. To stop the server, run: `npm run stop` or `yarn stop`
-3. To restart the server, run: `npm run restart` or `yarn restart`
+To start the server, run the following command:
+
+```sh
+yarn start
+```
 
 Once the server is running, to use the application, you need to pass the URL of the encrypted file you want to decrypt as a query parameter to the server's root endpoint (`/`). The file must be accessible through Rclone.
 
-For example, if you have an encrypted file at `https://cloud-storage.com/encrypted-file`, you would open your web browser and navigate to `http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file`.
+For example, if you have an encrypted file at `https://cloud-storage.com/encrypted-file` and you are running the server on `localhost:3000`, you would open your web browser and navigate to `http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file`.
 
 The server will then decrypt the file and set up the response headers to allow you to download the decrypted file directly from your browser. 
 

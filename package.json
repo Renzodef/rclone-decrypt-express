@@ -2,12 +2,10 @@
   "type": "module",
   "name": "rclone-decrypt-express",
   "version": "1.0.0",
-  "description": "A simple Express server for decrypting files from a specified URL using Rclone.",
+  "description": "A simple Express server to decrypt a Rclone crypted remote file.",
   "main": "server.js",
   "scripts": {
-    "restart": "pm2 restart server.js --no-daemon --watch --log",
-    "start": "pm2 start server.js --no-daemon --watch --log",
-    "stop": "pm2 stop server.js"
+    "start": "node foreverMonitor.js"
   },
   "repository": {
     "type": "git",
@@ -16,12 +14,14 @@
   "author": "Renzodef <renzodefrancesco@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "file-type": "^18.2.1",
+    "forever-monitor": "^3.0.3",
     "from2": "2.3.0",
-    "pm2": "^5.2.2",
     "rclone": "^1.0.0",
+    "readable-stream": "^4.4.1",
     "stream-chunker": "1.2.8"
   },
   "engines": {

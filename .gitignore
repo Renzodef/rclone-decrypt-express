@@ -58,14 +58,11 @@ local.properties
 ################
 *.sublime-workspace
 
-# Node.js #
+# Yarn #
 ###########
-node_modules/
-npm-debug.log
-package-lock.json
-yarn-debug.log*
-yarn-error.log*
-yarn.lock
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
 
 # Dotenv #
 ##############
