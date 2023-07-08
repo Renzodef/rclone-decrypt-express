@@ -14,7 +14,7 @@
 
 ## 📍 Overview
 
-The rclone-decrypt-express project is a simple [Express](https://expressjs.com/) server to decrypt a Rclone encrypted remote file at a specified URL. The server creates a read stream for the file, determine the file type of the stream using the [file-type](https://github.com/sindresorhus/file-type) library, and then downloads it to your local machine. The decryption is performed using the [rclone-js](https://github.com/FWeinb/rclone-js) library.
+The project is a simple [Express](https://expressjs.com/) server to decrypt a Rclone encrypted remote file at a specified URL. The server creates a read stream for the file, determine the file type of the stream using the [file-type](https://github.com/sindresorhus/file-type) library, and then downloads it to your local machine. The decryption is performed using the [rclone-js](https://github.com/FWeinb/rclone-js) library.
 
 ---
 
