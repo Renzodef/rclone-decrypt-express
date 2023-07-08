@@ -56,9 +56,9 @@ To start the server, run the following command:
 yarn start
 ```
 
-Once the server is running, to use the application, you need to pass the URL of the encrypted file you want to decrypt as a query parameter to the server's root endpoint (`/`). The file must be accessible through Rclone.
+Once the server is running, to use the application, you need to pass the URL of the encrypted file you want to decrypt as a query parameter to the base url of the application. The file must be accessible through Rclone.
 
-For example, if you have an encrypted file at `https://cloud-storage.com/encrypted-file` and you are running the server on `localhost:3000`, you would open your web browser and navigate to [http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file](http://localhost:3000/?fileUrl=https://cloud-storage.com/encrypted-file).
+For example, if you have an encrypted file at `https://cloud-storage.com/encrypted-file` and you are running the server on `localhost:3000`, you would open your web browser and navigate to [http://localhost:3000?fileUrl=https://cloud-storage.com/encrypted-file](http://localhost:3000?fileUrl=https://cloud-storage.com/encrypted-file).
 
 The server will then decrypt the file and set up the response headers to allow you to download the decrypted file directly from your browser.
 
