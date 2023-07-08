@@ -29,10 +29,10 @@ Before you begin, ensure that you have the following prerequisites installed:
 
 ### 📦 Installation
 
-1. Clone the rclone-decrypt-express repository:
-    ```sh
-    git clone https://github.com/Renzodef/rclone-decrypt-express
-    ```
+1. Clone the project repository:
+   ```sh
+   git clone https://github.com/Renzodef/rclone-decrypt-express
+   ```
 
 2. Change to the project directory:
    ```sh
