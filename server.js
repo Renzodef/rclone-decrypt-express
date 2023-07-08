@@ -44,7 +44,7 @@ app.get('*', async (req, res) => {
                     res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
                     decryptedStream2.pipe(res);
                 });
-            } else if (fileUrl == undefined) {
+            } else if (fileUrl === undefined) {
                 // Do Nothing
             } else {
                 res.status(400).send("Invalid URL");
