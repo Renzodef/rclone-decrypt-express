@@ -2,7 +2,7 @@
   "type": "module",
   "name": "rclone-decrypt-express",
   "version": "1.0.0",
-  "description": "A simple Express server to decrypt a Rclone crypted remote file.",
+  "description": "A simple Express server to decrypt a Rclone encrypted remote file at a specified URL.",
   "main": "server.js",
   "scripts": {
     "start": "node foreverMonitor.js"
